@@ -50,7 +50,7 @@ mixin RenderVisibilityDetectorBase on RenderObject {
     // of `addPostFrameCallback` or `scheduleFrameCallback` so that work will
     // be done even if a new frame isn't scheduled and without unnecessarily
     // scheduling a new frame.
-    SchedulerBinding.instance!.scheduleTask<void>(
+    SchedulerBinding.instance.scheduleTask<void>(
       _processCallbacks,
       Priority.touch,
     );
